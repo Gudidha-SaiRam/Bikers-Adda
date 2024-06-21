@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="duke_buy.css">
+    <title>Document</title>
+</head>
+<style>
+    /*utilities*/
+
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*top nav bar*/
+#top-nav-bar{
+    position: fixed;
+    width: 100vw;
+    color: rgb(10, 10, 10);
+    background-color: rgb(246, 255, 0);
+    height: 12vh;
+    justify-content: space-between;
+    z-index:5;
+}
+
+.left{
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: bolder;
+
+}
+
+.right h3{
+    margin: 1.8rem;
+    font-weight: bolder;
+    font-size: larger;
+    font-size: 20px;
+}
+
+.section{
+    top: 7vh;
+    position: relative;
+    padding: 1rem;
+    padding-right: 5rem;
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.box{
+    border: 2px solid black;
+    text-align: left;
+    margin: 1px 0px 0px 60px;
+    padding: 10px;
+    padding-left: 1rem;
+    height:580px;
+    width: 500px;
+    background-color: rgb(150, 201, 243);
+
+}
+.buttons{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.kit{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box :focus{
+    border: 3px solid #ff994f;
+}
+
+
+table{
+    border-collapse: collapse;
+    margin-top: 10rem;
+    margin-left: 30rem;
+    width: 600px;
+    height: 400px;
+    margin-bottom: 3rem;
+    justify-content: center;
+    text-align: center;
+}
+
+tr,td,th{
+    border: 4px solid black;
+    padding: 2rem;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+th{
+   color: red;
+   font-weight: bolder;
+   font-size: 30px;
+}
+
+td{
+  font-weight: bolder;
+}
+
+
+</style>
+<body>
+    <div id="top-nav-bar" class="flex-row">
+        <!--left-->
+        <div class="left flex-row">
+          <div style="color: red;">BIKERS</div> &nbsp;<div >ADDA</div>
+        </div>
+       <!--right-->
+        <div class="right flex-row">
+           <a href="index.html" style="color: inherit; text-decoration: none;"><h3>HOME</h3></a>
+           <a href="service.html" style="color: inherit; text-decoration: none;"><h3>SERVICES</h3></a>
+           <a href="about.html" style="color: inherit; text-decoration: none;"><h3>ABOUT</h3></a>
+           <a href="contact.html" style="color: inherit; text-decoration: none;"> <h3 style="padding-right: 1rem;">CONTACT US</h3></a> 
+        </div>
+      </div>
+      
+      <h1 style="padding-top: 7rem;justify-content: center;text-align: center;color: red;">YAMAHA R15</h1>
+
+      <div class="section">
+        <div class="box">
+            <h1 style="padding-bottom: 3rem;">Buy your Bike here...</h1>
+            <form action="https://formspree.io/f/xnnaaavd" method="post">
+                <label for="name">Name&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="name" required><br><br>
+                <label for="email">E-MAIL</label>
+                <input type="email" name="E-MAIL" required><br><br>
+                <label for="number">Number</label>
+                <input type="number" name="number"required> <br><br>
+                <label for="address">Address</label>
+                <input type="text" name="address" required><br><br>
+                <label for="pincode"> Pincode </label>
+                <input type="number" name="pincode" required><br></br>
+
+                  <!--  FOR GENDER  -->
+                <label for="gender">Gender:</label><br>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="Female">
+                <label for="Others">Others</label>
+                <input type="radio" name="gender" id="others" value="Others"><br><br>
+
+                     <!-- FOR ITEMS -->
+            <div class="kit">
+                <label for="item">Bike Name</label>
+                    <select name="item">
+                        <option value=""disabled selected>select</option>
+                        <option value ="YAMAHA R15">YAMAHA R15</option>
+                        
+                    </select>
+                    <br>
+                    <br>
+
+                  <!--  FOR QUANTITY  -->
+                  <label for="price">Seller Price</label>
+                  <select name="price">
+                      <option value="" disabled selected>select</option>
+                      <option value ="1,80,000" >1,80,000</option>
+                  </select>
+
+                  <br><br>
+                  <label for="transaction_id" >Transaction ID</label>
+                  <select name="transaction_id" id="" required>
+                    <option value="" disabled selected>select</option>
+                    <option value ="upi" >upi</option>
+                    <option value="EMI">EMI</option>
+                    <option value="CREDIT CARD">CREDIT CARD</option>
+                    <option value="DEBIT CARD">DEBIT CARD</option>
+                    <option value="LIQUID">LIQUID</option>
+                  </select>
+                  <!--Buttons-->    
+                  <div class="buttons" style="margin: 20px 10px;">
+                  <button type="reset" style="background-color: rgb(241, 136, 97);">Reset</button>
+                  <button type="submit" style="background-color: rgb(165, 228, 101);">Submit</button>
+
+            </div> 
+            </div></form>
+        </div>
+        
+        <div class="scan">
+          <h1 style="padding-left: 3rem;">UPI payment can be done here...</h1>
+          <br>
+        <img style="height: 500px;width: 600px;" src="BIKE PHOTOS/scanner.jpg" alt="scanner">
+      </div>
+      </div>
+    
+      <table>
+        <tr>
+          <th colspan="2">PAYMENT OFFERS</th>
+        </tr>
+        <tr>
+          <th rowspan="4">EMI options</th>
+          <td>ZERO INTREST</td>
+        </tr>
+        <tr>
+          <td>LOW DOWN PAYMENT</td>
+        </tr>
+        <tr>
+          <td>ZERO DOWN PAYMENT</td>
+        </tr>
+        <tr>
+          <td>LOW INTREST RATE</td>
+        </tr>
+      </table>
+
+      <h1 style="text-align: center;color: rgb(255, 163, 4);font-weight: bolder;margin-bottom: 2rem;">FOR MORE DETAILS CONATCT : <span style="color: red;">915442****</span></h1>
+
+      
+</body>
+</html>
