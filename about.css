@@ -1,0 +1,83 @@
+/*utilities*/
+
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*top nav bar*/
+#top-nav-bar{
+    position: fixed;
+    width: 100vw;
+    color: rgb(10, 10, 10);
+    background-color: rgb(246, 255, 0);
+    height: 12vh;
+    justify-content: space-between;
+    z-index:5;
+}
+
+.left{
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: bolder;
+
+}
+
+.right h3{
+    margin: 1.8rem;
+    font-weight: bolder;
+    font-size: larger;
+    font-size: 20px;
+}
+
+.body{
+    top: 17vh;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    /*padding-bottom: 10rem;*/
+    justify-content: justify;
+}
+
+.section{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2rem;
+}
+
+.matter{
+    font-size: 24px;
+    text-align: left;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    
+}
+
+.main{
+    font-size: 24px;
+    text-align: left;
+    padding: 3rem;
+}
+
+.resume{
+    justify-content: right;
+    text-align: right;
+    padding: 4rem;
+    padding-top: 2rem;
+}
